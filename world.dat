@@ -1,0 +1,86 @@
+{
+  "data": 
+  {
+    "chars":
+      [
+        ["You","human","male"],
+        ["Guy","human","male"],
+        ["Sheena","human","female"]
+      ],
+    "rooms":
+      [
+        ["living room","a dim lighted, rather large room with several furnitures"],
+        ["hall","a narrow corridor of the house"],
+        ["kitchen","there is a sink and a table with few appliances on it"],
+        ["bedroom","a luxuriously decorated place"],
+        ["front yard","desolate area filled with trash"],
+        ["14th street","a small, empty street within remnants of houses and cars."],
+        ["1st avenue","wide road, covered with moss. Some parts of the road is closed by collapsed buildings"],
+        ["junkyard","once an isolated place with waste, is now the most crowded area in the city"],
+        ["National Bank"," remained to its dark and spaceful lobby. Rest of the building is not accesible."],
+        ["Sam's Diner","a 50s style restaurant. It is still operating."],
+        ["men's room","behind the diner. There is a sign on the leftmost booth saying: \"Out of order!\""]
+      ],
+    "doors":
+      [
+        ["living room","hall","hall","door"],
+        ["hall","living room","living room","door"],
+
+        ["kitchen","hall","hall","door"],
+        ["hall","kitchen","kitchen","door"],
+
+        ["bedroom","hall","hall","door"],
+        ["hall","bedroom","bedroom","door"],
+
+        ["front yard","hall","back inside","door"],
+        ["hall","front yard","outside","door"],
+
+        ["front yard","14th street","street","gate"],
+        ["14th street","front yard","front yard","gate"],
+
+        ["14th street","1st avenue","1st avenue","crossing"],
+        ["1st avenue","14th street","14th street","crossing"],
+
+        ["1st avenue","Sam's Diner","diner","door"],
+        ["Sam's Diner","1st avenue","outside","door"],
+
+        ["Sam's Diner","men's room","men's room","rusty door"],
+        ["men's room","Sam's Diner","back","rusty door"],
+
+        ["1st avenue","National Bank","bank","swing door"],
+        ["National Bank","1st avenue","outside","swing door"],
+
+        ["1st avenue","junkyard","junkyard","large gate"],
+        ["junkyard","1st avenue","1st avenue","large gate"]
+      ],
+    "items":
+      [
+        ["fillet knife","knife",2,150,"hand"],
+        ["plaid shirt","shirt",0,100,"torso"],
+        ["orange t-shirt","shirt",0,100,"torso"],
+        ["zippo lighter","lighter",1,500,"hand"],
+        ["jeans","pants",0,100,"legs"],
+        ["army boots","pair of shoes",0,100,"feet"],
+        ["ipod nano","mp3 player",0,100,"misc"]
+      ],
+    "placements":
+      {
+        "items":
+          [
+            ["bedroom","orange t-shirt"],
+            ["bedroom","plaid shirt"],
+            ["bedroom","jeans"],
+            ["living room","ipod nano"],
+            ["kitchen","fillet knife"],
+            ["front yard","army boots"],
+            ["kitchen","zippo lighter"]
+          ],
+        "chars":
+          [
+            ["You","bedroom"],
+            ["Guy","front yard"],
+            ["Sheena","front yard"]
+          ]
+      }
+  }
+}

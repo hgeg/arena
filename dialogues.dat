@@ -1,0 +1,48 @@
+{
+    "data": {
+        "Guy": {
+            "Hey There!": [
+                {
+                    "How you doin'?": {
+                        "Fine I guess. You got any junk to spare?": [
+                            {
+                                "Yes I have a...": {
+                                    "That'll do man. Bless You.": [
+
+                                    ]
+                                }
+                            },
+                            {
+                                "Sorry, I don't have any.": {
+                                    "Well, umm... Nevermind then.": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "Get the hell out of my property!": {
+                        "Jeez man. Just chill out. C'mon Sheena, we're leavin'!": []
+                    }
+                }
+            ]
+        },
+        "Sheena": {
+            "...": [
+                {
+                    "Hello?": {
+                        "...": [
+                            {
+                                "Not the chatter type eh?": {
+                                    "...": [
+                                    
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
