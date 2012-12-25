@@ -43,9 +43,15 @@ class Dialogue:
     return ""
 
 
-  def parseLine(self,arg): 
+  def parseLine(self,arg,parser): 
     #TODO: to be implemented
-    return arg.split('%')[0] 
+    try:
+      text, script = arg.split('%')
+      for e in script.split(';'):
+        try: parser.parseLine(e)
+        except: pass 
+      return text
+    except: return arg
 
 class Parser:
 
@@ -70,6 +76,15 @@ class Parser:
   @staticmethod
   def say(p,s='...'):
     return '%s said: "%s"'%(p['name'],s)
+
+  @staticmethod
+  def give(p,_h):
+    if _h == 'myself': return 'that is a pointless effort.'
+    try:
+      i = p.give(p['cell']['people'][_h])
+      #return i['name']
+    except:
+      return 'there is nobody with that name.'
 
   @staticmethod
   def talk(p,_h):
@@ -111,8 +126,6 @@ class Parser:
       return '%s took the %s.'%(p['name'], _i)
     except:
       return "You can't see any %s here!"%_i
-
-      #choose(search(me['cell']['items'].values(),'jeans',['name','type']))
 
   @staticmethod
   def exit(p,_c): 

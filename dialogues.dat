@@ -6,7 +6,7 @@
                     "How you doin'?": {
                         "Fine I guess. You got any junk to spare?": [
                             {
-                                "Yes I have a...": {
+                                "Yes I have a...%give Guy *;": {
                                     "That'll do man. Bless You.": [
 
                                     ]

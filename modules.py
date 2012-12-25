@@ -65,6 +65,17 @@ class Character(Generic):
     d['%s'%self('name')] = self
     d.close()
 
+  def give(self,t,_i="*"):
+    try:
+      if _i == '*':
+        i = choose(self['items'])
+      else:
+        i = self['items'][_i]
+      t['items'][_i] = i
+      del self['items'][_i]
+      return i
+    except: pass
+
   def describe(self):
     data = '%s, a %s %s:\n'%(self['name'],self['race'],self['gender'])
     data += 'ST:%d\nDX:%d\nIQ:%d\nHT:%d\n'%(self['ST'],self['DX'],self['IQ'],self['HT'])
@@ -126,9 +137,9 @@ class Cell(Generic):
 
   def remove(self,i):
     if i['type'] in self['items']:
-      self['items'][i['type']][self['items'][i['type']].index(i)]
+      del self['items'][i['type']][self['items'][i['type']].index(i)]
       if len(self['items'][i['type']])==1:
-        self['items'].update({i['type']:i})
+        self['items'].update({i['type']:self['items'][i['type']][0]})
     else:
         return
 
