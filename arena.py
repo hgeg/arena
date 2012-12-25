@@ -82,7 +82,8 @@ class Parser:
     if _h == 'myself': return 'that is a pointless effort.'
     try:
       i = p.give(p['cell']['people'][_h])
-      #return i['name']
+      print i
+      return i['name']
     except:
       return 'there is nobody with that name.'
 

@@ -68,7 +68,7 @@ class Character(Generic):
   def give(self,t,_i="*"):
     try:
       if _i == '*':
-        i = choose(self['items'])
+        i = choose(self['items'].values())
       else:
         i = self['items'][_i]
       t['items'][_i] = i
