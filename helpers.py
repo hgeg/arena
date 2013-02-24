@@ -27,7 +27,8 @@ def roll(i,add=False):
 def pronoun(i,t="accusative"):
   pronouns = { "accusativemale":"he", "accusativefemale":"she" , 
                "genitivemale":"his",  "genitivefemale":"her",
-               "dativemale":"him","dativefemale":"her", }
+               "dativemale":"him","dativefemale":"her", 
+               "ablativemale":"himself","ablativefemale":"herself"}
   return pronouns["%s%s"%(t,i["gender"])]
 
 def article(i,t="type"):
