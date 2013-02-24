@@ -7,7 +7,6 @@ chars = {}
 rooms = {}
 items = {}
 D = 0
-me = 0
 
 class Dialogue:
 
@@ -82,7 +81,6 @@ class Parser:
     if _h == 'myself': return 'that is a pointless effort.'
     try:
       i = p.give(p['cell']['people'][_h])
-      print i
       return i['name']
     except:
       return 'there is nobody with that name.'
@@ -290,21 +288,11 @@ class Game:
 
   @staticmethod
   def main():
-    global D,me,chars,rooms,items
+    global D,chars,rooms,items
     loaded,message = Game.init()
     print message
     if not loaded: return 1
     clearscreen()
-    
-    #start the game
-    me = chars['You']
-    while True:
-      print me['cell'].describe(me)
-      try:
-        print Parser.parseLine(me,raw_input('>')),'\n'
-      except: 
-        print "exit"
-        return 0
-
+    print "Initiated game!"
 
 if __name__=="__main__": Game.main()

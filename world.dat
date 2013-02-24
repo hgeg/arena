@@ -3,7 +3,8 @@
   {
     "chars":
       [
-        ["You","human","male"],
+        ["Withnail","human","male"],
+        ["Marwood","dark elf","male"],
         ["Guy","human","male"],
         ["Sheena","human","female"]
       ],
@@ -77,7 +78,8 @@
           ],
         "chars":
           [
-            ["You","bedroom"],
+            ["Withnail","bedroom"],
+            ["Marwood","kitchen"],
             ["Guy","front yard"],
             ["Sheena","front yard"]
           ]

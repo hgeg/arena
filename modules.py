@@ -51,7 +51,10 @@ class Generic:
 class Character(Generic):
   def __init__(self,f=''):
     d = shelve.open('chars.gdb')
-    self.data = d[f]
+    if f in d:
+      self.data = d[f]
+    else:
+      self.data = None
 
   def __init__(self,n='',r='',g=''): self.data={
                                    'name':n,'gender':g,'race':r,'type':'Character',

@@ -1,3 +1,4 @@
 #!/usr/bin/python
-import arena
-arena.Game.main()
+import nightsword
+nightsword.reactor.listenTCP(1025, nightsword.PubFactory())
+nightsword.reactor.run()

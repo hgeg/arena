@@ -54,10 +54,9 @@ def choose(l):
   return l[int(s)-1]
 
 def clearscreen(numlines=100):
-  if os.name == "posix":
-    os.system('clear')
-  elif os.name in ("nt", "dos", "ce"):
-    os.system('CLS')
-  print '\n' * numlines
-  return ""
+  #if os.name == "posix":
+  #  os.system('clear')
+  #elif os.name in ("nt", "dos", "ce"):
+  #  os.system('CLS')
+  return '\n' * numlines
 
